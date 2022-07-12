@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/form_producto.css' %}">
+
+<body style="background-color: pink;">
+    <h3 style="text-align: center">Formulario Producto </h3>
+
+    <div class="form">
+        <form method="POST" action="" id="formulario" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                {{form.as_table}}
+            </div>
+            <input type="submit" value="Guardar">
+            <input type="reset" value="Limpiar">
+            <div id="error" class="alert alert-danger" role="alert"></div>
+        </form>
+        <div class="alert alert-sucess" role="alert">
+            {{mensaje}}
+        </div>
+        </form>
+    </div>
+</body>
+
+</html>
+</body>
+
+</html>
